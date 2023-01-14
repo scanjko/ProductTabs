@@ -1,0 +1,15 @@
+<?php
+
+/** @var Magento\Catalog\Block\Product\View $block */
+
+$_product =  $block->getProduct();
+$youTubeVideoCode = $_product->getData('youtube_video');
+?>
+
+<?php if ( $youTubeVideoCode) : ?>
+
+    <iframe data-mage-init='{"Pixel_ProductTabs/js/youtube-video-tab":{}}' style="aspect-ratio: 16/9;"  width="100%" height="auto" src="https://www.youtube.com/embed/<?= $youTubeVideoCode ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<?php endif; ?>
+
+
